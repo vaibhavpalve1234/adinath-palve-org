@@ -1,0 +1,9 @@
+.submit-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+    margin-left: 50%;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
