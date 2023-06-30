@@ -51,6 +51,10 @@ export default function Header() {
             <div>
                 <Footer />
             </div>
+            <hr/>
+            <div className="text-center">
+                <p> Copyright @ 2023. All Right Reserved. <strong>Adinath palve</strong> | Developed & design <strong>Vaibhav palve</strong></p>
+            </div>
         </div>
     )
 }
