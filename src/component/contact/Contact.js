@@ -7,9 +7,6 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // TODO: Handle form submission logic
-        // You can perform form validation and submission here
-        // For this example, we'll simply log the form data
         console.log('Email:', email);
         console.log('Number:', number);
         console.log('Message:', message);
@@ -55,6 +52,7 @@ function Contact() {
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
+            <br />
         </div>
     );
 };

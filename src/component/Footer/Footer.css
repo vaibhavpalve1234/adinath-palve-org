@@ -1,3 +1,11 @@
-.footer {
-    background-color: rgb(237, 237, 243);
-}
+.social-media-footer {
+    display: flex;
+    align-items: center;
+  }
+  .social-media-footer a{
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px)  {
+    
+  }

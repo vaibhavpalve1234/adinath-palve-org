@@ -22,6 +22,7 @@ const HeaderContainer = () => {
         <div className="header">
             <div className="logo">
                 <div className="position-absolute top-0 start-50 translate-middle-z">
+                    {/**if you want to make icon in first position <div className="position-absolute top-0 start-0 translate-middle-z">  use above tag*/}
                     <a href='https://en.wikipedia.org/wiki/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)' >
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg/360px-Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg.png" width="70" alt='Not found icon' />
                     </a>

@@ -1,35 +1,43 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css'
+import Contact from '../contact/Contact';
+import PostForm from '../Map/Map';
 
 function Footer() {
     return (
         <div className='footer'>
             <div className="container" >
-                <div className="row">
+                <br />
+                <div className="row mt-1">
                     <div className="col-lg-4 text-center">
-                        <h4>Make Life Good</h4>
+                        <h4><strong>Address</strong></h4>
                         <p>
-                            SantoshNage, <br />O.T. Section -3, <br />Ulhasnagar 421003
+                            <strong>B.K. No. 1092,</strong>
+                            <br/><strong>SantoshNage, </strong>  
+                            <br /><strong>O.T. Section -3,</strong>  
+                            <br /><strong>Ulhasnagar-421003</strong> 
                         </p>
-                        <p>+91-9921122627</p>
-                    </div>
-                    <div className="col-lg-4 text-center">
-                    <p className='text-center'>&reg; 2023 Vaibhav palve &copy;</p>
-                    </div>
-                    <div className="col-lg-4 text-center">
+                        <h6>+91-9921122627</h6>
+                        <hr />
                         <h4>connect Us !!</h4>
                         <p>
-                            Social Media Application <br />
-                            <div className='row'>
-                                <a href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /></a>
-                                <a href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /></a>
-                                <a href='https://wa.me/9921122627'><FaWhatsapp /></a>
-                            </div>
+                            <strong>Social Media Application</strong><br />
                         </p>
+                        <div className="social-mediai-footer">
+                            <a className='social-media-icon' href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /></a>
+                            <a className='social-media-icon' href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /></a>
+                            <a className='social-media-icon' href='https://wa.me/9921122627'><FaWhatsapp /></a>
+                            <a className='social-media-icon'><FaTwitter /></a>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 text-center">
+                        <Contact />
+                    </div>
+                    <div className="col-lg-4 text-center">
+                        <PostForm />
                     </div>
                 </div>
-                
             </div>
         </div>
     )

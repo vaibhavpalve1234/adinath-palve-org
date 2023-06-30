@@ -48,7 +48,7 @@ const PostForm = () => {
 
   return (
     <div>{location ? <form onSubmit={handleSubmit}>
-      <MapContainer center={[location.latitude, location.longitude]} zoom={13} style={{ height: '400px', width: '100%' }}>
+      <MapContainer center={[location.latitude, location.longitude]} zoom={13} style={{ height: '300px', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="Map data &copy; OpenStreetMap contributors"

@@ -6,7 +6,6 @@ import Footer from '../Footer/Footer';
 import MultipleVideoPlayer from '../platform/MultipleVideoPlayer';
 import Slider from '../Slider/Slider';
 import PhotoGallery from '../Photo/PhotoGallery';
-import Contact from '../contact/Contact';
 
 export default function Header() {
     const opts = {
@@ -20,7 +19,7 @@ export default function Header() {
     };
 
     const videos = [
-        { src: '4AHew1QqXDo', opts, details:"main song" },
+        { src: '4AHew1QqXDo', opts: { ...opts, playerVars: { autoplay: 1, mute: 0, start: 50 , end:56, loop:1 } }, details:"main song" },
         { src: 'YlIc_kOQufw', opts, details:"सामुदायिक वाढदिवस सोहळा संतोषनगर उल्हासनगर ३" },
         { src: 'g50DvfSgNew', opts, details:"धर्मवीर" },
         { src: 'eknr5tuiLHU', opts, details:"बाबा साहेब १३१ वॉं जयंती समारोह संतोषनगर उल्हासनगर ३" },
@@ -48,9 +47,6 @@ export default function Header() {
                 <PhotoGallery />
             </div>
             <br/>
-            <div>
-                <Contact />
-            </div>
             <span></span>
             <div>
                 <Footer />
