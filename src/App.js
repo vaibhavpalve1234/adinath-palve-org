@@ -14,7 +14,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <Routes >
-        <Route path="/home" element={<Header />} />  
+        <Route path="/" element={<Header />} />  
         <Route path="/contact" element={<Contact />} />
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="*" element={<NotFound />} />

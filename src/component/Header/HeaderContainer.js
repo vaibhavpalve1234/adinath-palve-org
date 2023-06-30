@@ -21,20 +21,14 @@ const HeaderContainer = () => {
     return (
         <div className="header">
             <div className="logo">
-                <div className="position-absolute  top-0 start-20 translate-middle-z">
+                <div className="position-absolute top-0 start-50 translate-middle-z">
                     <a href='https://en.wikipedia.org/wiki/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)' >
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg/360px-Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg.png" width="55" alt='Not found icon' />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg/360px-Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg.png" width="70" alt='Not found icon' />
                     </a>
                 </div>
             </div>
-            <div className="menu">
-                <div className="menu-item"><a className="nav-link active" href="/home">Home</a></div>
-                <div className="menu-item"><a className="nav-link active" href="/photo">Photo</a></div>
-                <div className="menu-item"><a className="nav-link active" href="/work">Work</a></div>
-                <div className="menu-item"><a className="nav-link active" href="/event">events</a></div>
-                <div className="menu-item"><a className="nav-link active" href="/contact">contact Us</a></div>
-                <div className="menu-item"><a className="nav-link active" href="/feedback">Feedback</a></div>
-            </div>
+            <br />
+            <br />
             <div className="social-media">
                 {/* <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Resigeter</a></div>
                 <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div> */}
@@ -74,11 +68,11 @@ const HeaderContainer = () => {
             </Modal>
             {showMenu && (
                 <div className="responsive-menu">
-                    <div className="menu-item"><a className="nav-link active" href="/home">Home</a></div>
-                    <div className="menu-item"><a className="nav-link active" href="/photo">Photo</a></div>
-                    <div className="menu-item"><a className="nav-link active" href="/work">Work</a></div>
-                    <div className="menu-item"><a className="nav-link active" href="/contact">contact Us</a></div>
-                    <div className="menu-item"><a className="nav-link active" href="/feedback">Feedback</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">Home</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">Photo</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">Work</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">contact Us</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">Feedback</a></div>
                     <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Resigeter</a></div>
                     <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div>
                 </div>

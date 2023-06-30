@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import HeaderContainer from '../Header/HeaderContainer'
 
 function Contact() {
     const [number, setNumber] = useState('');
@@ -18,7 +17,6 @@ function Contact() {
 
     return (
         <div>
-            <HeaderContainer />
             <div className="container">
                 <h2>Contact Form</h2>
                 <form onSubmit={handleSubmit}>
