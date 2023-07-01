@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaTimes, FaBars, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTimes, FaBars, FaWhatsapp } from 'react-icons/fa';
 import './Header.css';
 import Login from "../signin/Login"
 import Register from '../signup/Register';
+import Notification from '../Notification/Notification';
 const HeaderContainer = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -31,12 +32,11 @@ const HeaderContainer = () => {
             <br />
             <br />
             <div className="social-media">
-                {/* <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Resigeter</a></div>
-                <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div> */}
                 <a className='social-media-icon' href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /> </a>
                 <a className='social-media-icon' href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /> </a>
-                <a className='social-media-icon' href='https://wa.me/9921122627'><FaWhatsapp /> </a>
-                <a className='social-media-icon'><FaTwitter /> </a>
+                <a className='social-media-icon ' href='https://wa.me/9921122627'><FaWhatsapp /> </a>
+                <a className='social-media-icon '> <Notification /> </a>
+
             </div>
             <div className="burger-menu" onClick={toggleMenu}>
                 {showMenu ? <FaTimes /> : <FaBars />}
@@ -56,7 +56,7 @@ const HeaderContainer = () => {
             </Modal>
             <Modal show={showLoginModel} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Registration Page</Modal.Title>
+                    <Modal.Title>Login Page</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Login />
@@ -72,9 +72,9 @@ const HeaderContainer = () => {
                     <div className="menu-item"><a className="nav-link active" href="/">Home</a></div>
                     <div className="menu-item"><a className="nav-link active" href="/">Photo</a></div>
                     <div className="menu-item"><a className="nav-link active" href="/">Work</a></div>
-                    <div className="menu-item"><a className="nav-link active" href="/">contact Us</a></div>
+                    <div className="menu-item"><a className="nav-link active" href="/">contact</a></div>
                     <div className="menu-item"><a className="nav-link active" href="/">Feedback</a></div>
-                    <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Resigeter</a></div>
+                    <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Register</a></div>
                     <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div>
                 </div>
             )}

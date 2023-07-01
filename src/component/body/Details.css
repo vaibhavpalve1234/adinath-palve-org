@@ -1,10 +1,10 @@
 
 .text-transaction p {
-  background-color: rgba(255, 255, 255, 0.323);
+  background-color: rgb(255, 255, 255);
     color: rgb(7, 7, 7);
     opacity: 0;
     transform: translateX(-100px);
-    animation: slide-in 3s ease forwards;
+    animation: slide-in 1.6s ease forwards;
   }
   
   @keyframes slide-in {
@@ -25,7 +25,7 @@
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     max-width: 163%;
-    height: 500px;
+    height: 550px;
     background-size: auto;
     /* mix-blend-mode: darken; */
 }
@@ -56,13 +56,13 @@
   /* Media query for responsive layout */
   @media (max-width: 600px) {
     .advanced-transaction {
-      position: fixed;
+      position: absolute;
       perspective: 800px;
       width: 100%;
       height: 300px;
     }
     div MDBCarousel MDBCarouselItem{
-      width: 100%;
+      width: 10%;
     }
     
   }
