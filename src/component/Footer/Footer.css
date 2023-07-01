@@ -1,11 +1,14 @@
 .social-media-footer {
-    display: flex;
-    align-items: center;
-  }
-  .social-media-footer a{
-    text-decoration: none;
-  }
+  display: flex;
+  align-items: center;
+}
 
-  @media (max-width: 768px)  {
-    
+.social-media-footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .social-media-footer {
+    flex-direction: column
   }
+}

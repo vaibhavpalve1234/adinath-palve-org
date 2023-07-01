@@ -6,7 +6,7 @@ const Slider = () => {
   const images = [
     {
       id: 1,
-      imageUrl: 'https://tse2.mm.bing.net/th?id=OIP._I9HqjkCS0t-TQnbz-sSjQHaGV&pid=Api&P=0&h=180',
+      imageUrl: 'https://imagevars.gulfnews.com/2012/11/17/1_16a082d438c.1106213_367687829_16a082d438c_large.jpg',
       title: 'बाळासाहेब ठाकरे',
       description: 'मराठी माणसाचा अभिमान, हिंदूंची आशा, हिंदू हृदयाचा सम्राट, शिवसैनिकांचा सेनापती, शिवसेनेच्या महान मंत्राचा जनक.',
     },
@@ -24,7 +24,7 @@ const Slider = () => {
     },
     {
       id: 4,
-      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/83/Bappa_Lahiri%2C_Bappi_Lahiri%2C_Swapna_Patker%2C_Sanjay_Raut_%28cropped%29.jpg',
+      imageUrl: 'https://th.bing.com/th/id/R.474ee0e3f2d4f51831cad98e9d778bf2?rik=TrMPtdwB9pHAHw&riu=http%3a%2f%2fgovernancenow.com%2ftemp%2fsanjay_raut1.jpg&ehk=uGUpCJ1YnTvATVMRtzd72NOCpnSV57NSL2639khaT9U%3d&risl=&pid=ImgRaw&r=0',
       title: 'संजय राऊत',
       description: 'शिवसेनेचे मुखपत्र सामनाचे कार्यकारी संपादक , खासदार ',
     },

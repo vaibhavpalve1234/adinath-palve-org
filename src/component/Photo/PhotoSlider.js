@@ -1,8 +1,15 @@
 import React, { useRef, useEffect } from 'react';
-import {
-    MDBCarousel,
-    MDBCarouselItem,
-} from 'mdb-react-ui-kit';
+// import {
+//     MDBCarousel,
+//     MDBCarouselItem,
+// } from 'mdb-react-ui-kit';
+import Button from "@material-ui/core/Button";
+import MobileStepper from "@material-ui/core/MobileStepper";
+import Paper from "@material-ui/core/Paper";
+import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
+import Typography from "@material-ui/core/Typography";
+import { useTheme } from "@material-ui/core/styles";
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 
 
 export default function Slider({ img }) {
@@ -57,44 +64,77 @@ export default function Slider({ img }) {
         caption: 'covid ',
     },
 
-    ]
+    ]    
+    const CollectionSize = expandPhotoes.length;
+    const theme = useTheme();
+    const [index, setActiveStep] = React.useState(0);
+
+    // Function to go to the next picture
+    const goToNextPicture = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
+    const goToPrivousPicture = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    };
     useEffect(() => {
         if (myElementRef.current) {
             const styles = window.getComputedStyle(myElementRef.current);
             if (!styles) {
-                return MDBCarouselItem.setAttribute('style', `align-content: fixed`);
+                // return MDBCarouselItem.setAttribute('style', `align-content: fixed`);
             }
         }
     }, []);
     return (
         <div ref={myElementRef} className='card'>
-            <MDBCarousel showIndicators showControls fade dealy={5000}>
-                <MDBCarouselItem
-                    className='w-100 d-md-block mt-50'
-                    src={img.src}
-                    alt=''
-                    width={"60%"}
-                    height={"300px"}
-                >
-                </MDBCarouselItem>
-                <MDBCarouselItem
-                    className='w-100 d-md-block mt-50'
-                    src={expandPhotoes[img.id + 2].src}
-                    alt='...'
-                    width={"60%"}
-                    height={"300px"}
-                >
-
-                </MDBCarouselItem>
-                <MDBCarouselItem
-                    className='w-100% d-md-block mt-50'
-                    src='https://www.successyeti.com/wp-content/uploads/2021/07/balasaheb-thackeray-a-true-inspiration-know-the-journey-719x405.jpg'
-                    alt='...'
-                    width={"60%"}
-                    height={"300px"}
-                >
-                </MDBCarouselItem>
-            </MDBCarousel>
+            <Paper
+                square
+                elevation={0}
+                style={{
+                    height: 50,
+                    display: "flex",
+                    paddingLeft: theme.spacing(4),
+                    backgroundColor: theme.palette.background.default,
+                    alignItems: "center",
+                }}
+            >
+                <Typography>{expandPhotoes[index].caption}</Typography>
+            </Paper>
+            <img
+                src={expandPhotoes[index].src}
+                style={{
+                    height: 360,
+                    width: "100%",
+                    maxWidth: '100%',
+                    display: "block",
+                    overflow: "hidden",
+                }}
+                alt={expandPhotoes[index].caption}
+            />
+            <MobileStepper
+                variant="text"
+                position="static"
+                activeStep={index}
+                steps={CollectionSize}
+                nextButton={<Button size="small" onClick={goToNextPicture} disabled={index === CollectionSize - 1}> Next 
+                {theme.direction !== "rtl" ? (
+                        <KeyboardArrowRight />
+                    ) : (
+                        <KeyboardArrowLeft />
+                    )}
+                </Button>
+                }
+                backButton={
+                    <Button
+                        size="small"
+                        onClick={goToPrivousPicture}
+                        disabled={index === 0}
+                    > prv {theme.direction !== "ltr" ? (
+                        <KeyboardArrowRight />
+                    ) : (
+                        <KeyboardArrowLeft />
+                    )}</Button>
+                }
+            />
         </div>
 
     );

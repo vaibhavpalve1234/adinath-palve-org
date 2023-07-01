@@ -137,7 +137,7 @@ const PhotoGallery = () => {
                     {expandedImage && (
                         <Modal show={showModal} onHide={handleCloseClick}>
                             <Modal.Header closeButton>
-                                <Modal.Title>Image Description</Modal.Title>
+                                <Modal.Title>Image Gallery</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                                 <Slider img={expandPhotoes[expandedImage.i]} />
