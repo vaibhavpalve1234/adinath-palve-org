@@ -1,11 +1,11 @@
 import React from 'react';
-import './Header.css'
-import HeaderContainer from './HeaderContainer'
-import Details from '../Details/Details';
-import Footer from '../Footer/Footer';
-import MultipleVideoPlayer from '../platform/MultipleVideoPlayer';
-import Slider from '../Slider/Slider';
-import PhotoGallery from '../Photo/PhotoGallery';
+import './Header/Header.css'
+import HeaderContainer from './Header/HeaderContainer'
+import Details from './Details/Details';
+import Footer from './Footer/Footer';
+import MultipleVideoPlayer from './platform/MultipleVideoPlayer';
+import Slider from './Slider/Slider';
+import PhotoGallery from './Photo/PhotoGallery';
 
 export default function Header() {
     const opts = {
