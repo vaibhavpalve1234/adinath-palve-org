@@ -28,12 +28,6 @@ const Slider = () => {
       title: 'संजय राऊत',
       description: 'शिवसेनेचे मुखपत्र सामनाचे कार्यकारी संपादक , खासदार ',
     },
-    {
-      id: 5,
-      imageUrl: 'https://th.bing.com/th/id/R.6bff367be5c5a8b4760cc2778b4cbe7f?rik=l8j37yxmJkkQMA&riu=http%3a%2f%2fmarathicelebs.com%2fwp-content%2fuploads%2f2017%2f04%2fAdesh_Bandekar_2.jpg&ehk=WTOFnMQULZ7yiitXguZcBamp7pA%2fihQJ6VNlTIBXEh8%3d&risl=&pid=ImgRaw&r=0',
-      title: 'आदेश बांदेकर',
-      description: ' शिवसेना सचिव आणि नेते ',
-    },
   ];
 
   const handleCardClick = (index) => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './PhotoGallery.css';
+import Slider from './PhotoSlider';
 const PhotoGallery = () => {
     // Example photo data
     const photos = [
@@ -69,7 +70,7 @@ const PhotoGallery = () => {
         id: 3,
         src: 'https://lh3.googleusercontent.com/pw/AJFCJaWhpOZT_WKbhjkMpCloynP4rnL4YD0G5ppm_c_A2HKNWH7AArV4eriXsWfKpP2eppd5ttavuaKA_wKGo701ILQZR0-EQfH8xbnuu83XsMW5tgzeULv25frG3r75X6DE7QANA2cXaVGbMdP4yN1ssdJeIg=w831-h960-s-no?authuser=0',
         caption: 'covid 4',
-    },{
+    }, {
         id: 4,
         src: 'https://lh3.googleusercontent.com/pw/AJFCJaUtRPi8gbPpRfOFL7yQvAxAcwPvkb7cQXbxYRvAysxD5qFr_LRv7v--t1H_5HD4Tp1RyQW5F43B2Mu7rg7cFyp6g13RXu1kTidyUkXIY8DX3lODPdFDeJV5kI6ltSuvjJA3QcXQlmImJWfiBr2T55KbSA=w831-h960-s-no?authuser=0',
         caption: 'covid 5 ',
@@ -104,14 +105,14 @@ const PhotoGallery = () => {
         src: 'https://lh3.googleusercontent.com/pw/AJFCJaU99ACWWruppjXMFdqY2YCkP81e7NKlJeq7OWa3UqK0tP1bTtN5TiOGOzCyFHipXs7Va1g9EYKszQsfXK5vQt6aWWSg6jCctBoRxuR8G1eI85YbCtEUWE9f2Nta-QKaG9r94m1CRwErYwRNwQBI_sS3=w831-h960-s-no?authuser=0',
         caption: 'covid ',
     },
-    
-]
+
+    ]
     const [expandedImage, setExpandedImage] = useState(null);
     const [showModal, setShowModal] = useState(false);
 
 
-    const handleImageClick = ({image, i}) => {
-        setExpandedImage({image, i});
+    const handleImageClick = ({ image, i }) => {
+        setExpandedImage({ image, i });
         setShowModal(true);
     };
 
@@ -130,22 +131,16 @@ const PhotoGallery = () => {
                             <img
                                 src={image.src}
                                 alt={image.alt}
-                                onClick={() => handleImageClick({image, i})} />
+                                onClick={() => handleImageClick({ image, i })} />
                         </div>
                     ))}
-                    {expandedImage&& (
+                    {expandedImage && (
                         <Modal show={showModal} onHide={handleCloseClick}>
                             <Modal.Header closeButton>
                                 <Modal.Title>Image Description</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <div className='card'>
-                                    <img src={expandPhotoes[expandedImage.i].src} alt="not found" className="modal-image"  />
-                                    <div class="card-body">
-                                        <p>{expandedImage.image.caption}</p>
-
-                                    </div>
-                                </div>
+                                <Slider img={expandPhotoes[expandedImage.i]} />
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button onClick={handleCloseClick}>Close</Button>
