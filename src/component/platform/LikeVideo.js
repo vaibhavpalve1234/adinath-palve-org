@@ -35,7 +35,7 @@ const LikeVideo = ({ videoId }) => {
   return (
     <div className='container'>
       <p style={{"margin-left":"130px","margin-top":"10", "justifyContent":"center"}} onClick={handleLike}>
-      <FavoriteIcon color={like ? 'secondary' :'white'} /> {likes}
+      <FavoriteIcon color={like ? 'secondary' :''} /> {likes}
         </p>
     </div>
   );

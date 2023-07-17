@@ -13,8 +13,8 @@ function Footer() {
                     <div className="col-lg-4 text-center">
                         <h4><strong>Address</strong></h4>
                         <p>
-                            <strong>B.K. No. 1092,</strong>
-                            <br/><strong>SantoshNage, </strong>  
+                            <strong>ShivSena Shakha,</strong>
+                            <br/><strong>SantoshNagar, </strong>  
                             <br /><strong>O.T. Section -3,</strong>  
                             <br /><strong>Ulhasnagar-421003</strong> 
                         </p>
@@ -27,7 +27,7 @@ function Footer() {
                         <div className="social-mediai-footer">
                             <a className='social-media-icon' href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /></a>
                             <a className='social-media-icon' href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /></a>
-                            <a className='social-media-icon' href='https://wa.me/9921122627'><FaWhatsapp /></a>
+                            <a className='social-media-icon' href='https://wa.me/9921122627/?text=`Please add me in "आदिनाथ पालवे मित्र मंडळ 🚩"`'><FaWhatsapp /></a>
                             <a className='social-media-icon'><FaTwitter /></a>
                         </div>
                     </div>

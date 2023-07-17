@@ -19,7 +19,7 @@ export default function LikeButton() {
     };
     return (
         <p style={{ "margin-left": "50%", "margin-top": "10px", "justifyContent": "center" }} onClick={handleLike}>
-            <FavoriteIcon color={like ? 'secondary' : 'white'} /> {likes}
+            <FavoriteIcon color={like ? 'secondary' : ''} /> {likes}
         </p>
     )
 }
