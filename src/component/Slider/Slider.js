@@ -28,6 +28,36 @@ const Slider = () => {
       title: 'संजय राऊत',
       description: 'शिवसेनेचे मुखपत्र सामनाचे कार्यकारी संपादक , खासदार ',
     },
+    {
+      id: 5,
+      imageUrl: 'https://ourneta.com/wp-content/uploads/2020/02/Sunil-Prabhu-%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A4%BF%E0%A4%B2-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A5%81.jpg',
+      title: 'सुनील प्रभू',
+      description: 'आमदार शिवसेने',
+    },
+    {
+      id: 6,
+      imageUrl: 'https://tse1.mm.bing.net/th?id=OIP.Rt5sswpmhisinFt1o65AjgHaHH&pid=Api&P=0&h=180',
+      title: 'भास्कर जाधव',
+      description: 'आमदार शिवसेने',
+    },
+    {
+      id: 7,
+      imageUrl: 'https://english.cdn.zeenews.com/sites/default/files/2022/06/22/1056475-sena-mla-nitin.jpg',
+      title: 'नितीन देशमुख',
+      description: 'आमदार शिवसेने',
+    },
+    {
+      id: 8,
+      imageUrl: 'https://tse3.mm.bing.net/th?id=OIP.IAgl94ED0bFeiYRz5X_EVAHaLG&pid=Api&P=0&h=180',
+      title: 'वैभव नाईक ',
+      description: 'आमदार शिवसेने',
+    },
+    {
+      id: 9,
+      imageUrl: 'https://d3pc1xvrcw35tl.cloudfront.net/images/1200x900/rajan-salvi-1_2023041002128.jpg',
+      title: 'राजन साळवी ',
+      description: 'आमदार शिवसेने',
+    },
   ];
 
   const handleCardClick = (index) => {

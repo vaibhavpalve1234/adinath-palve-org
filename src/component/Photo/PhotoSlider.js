@@ -1,15 +1,18 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 // import {
 //     MDBCarousel,
 //     MDBCarouselItem,
 // } from 'mdb-react-ui-kit';
 import Button from "@material-ui/core/Button";
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import Typography from "@material-ui/core/Typography";
 import { useTheme } from "@material-ui/core/styles";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LikeButton from './LikeButton';
 
 
 export default function Slider({ img }) {
@@ -64,10 +67,15 @@ export default function Slider({ img }) {
         caption: 'covid ',
     },
 
-    ]    
+    ]
     const CollectionSize = expandPhotoes.length;
     const theme = useTheme();
     const [index, setActiveStep] = React.useState(0);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleImageClick = () => {
+        setIsExpanded(!isExpanded);
+    };
 
     // Function to go to the next picture
     const goToNextPicture = () => {
@@ -99,24 +107,28 @@ export default function Slider({ img }) {
             >
                 <Typography>{expandPhotoes[index].caption}</Typography>
             </Paper>
-            <img
-                src={expandPhotoes[index].src}
-                style={{
-                    height: 360,
-                    width: "100%",
-                    maxWidth: '100%',
-                    display: "block",
-                    overflow: "hidden",
-                }}
-                alt={expandPhotoes[index].caption}
-            />
+            <div className={`image-container ${isExpanded ? 'expanded' : ''}`}>
+                <img
+                    src={expandPhotoes[index].src}
+                    // onClick={handleImageClick}
+                    className="image"
+                    style={{
+                        height: 360,
+                        width: "100%",
+                        maxWidth: '100%',
+                        display: "block",
+                        overflow: "hidden",
+                    }}
+                    alt={expandPhotoes[index].caption}
+                />
+            </div>
             <MobileStepper
                 variant="text"
                 position="static"
                 activeStep={index}
                 steps={CollectionSize}
-                nextButton={<Button size="small" onClick={goToNextPicture} disabled={index === CollectionSize - 1}> Next 
-                {theme.direction !== "rtl" ? (
+                nextButton={<Button size="small" onClick={goToNextPicture} disabled={index === CollectionSize - 1}> Next
+                    {theme.direction !== "rtl" ? (
                         <KeyboardArrowRight />
                     ) : (
                         <KeyboardArrowLeft />
@@ -135,6 +147,8 @@ export default function Slider({ img }) {
                     )}</Button>
                 }
             />
+            <LikeButton />
+
         </div>
 
     );

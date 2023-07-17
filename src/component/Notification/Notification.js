@@ -1,29 +1,34 @@
 
 import './Notification.css'
-import { FaBell } from 'react-icons/fa';
+import { MdNotificationsActive, MdNotificationAdd } from 'react-icons/md';
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import data from './data.json';
 
 
 
 const Notification = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showModel, setShowModal] = useState(false);
-    const [notifications, setNotifications] = useState([
-        { id: 1, message: 'Notification 1', title: "Happy birthday", img:'' },
-        { id: 2, message: 'Notification 2', title: "health cehck up", img:'' },
-        { id: 3, message: 'Notification 3', title: "evening event", img:'' }
-    ]);
+    const [notifications, setNotifications] = useState([]);
 
     const handleNotificationClick = () => {
         setIsOpen(true);
-        setShowModal(true)
+        setNotifications(data)
+        setShowModal(true);
+        // console.log(data)
+
     };
     const handleCloseModal = () => {
         setIsOpen(false);
         setShowModal(false)
+    };
+    const handleCloseAndClearModal = () => {
+        setIsOpen(false);
+        setShowModal(false);
+        setNotifications([])
     };
 
 
@@ -40,7 +45,7 @@ const Notification = () => {
     return (
         <div className="notification-container">
             <div className="notification" onClick={handleNotificationClick}>
-                <span className="notification-icon"><FaBell /></span>
+                {notifications.length ? <span className="notification-icon"><MdNotificationsActive /></span> : <span className="notification-icon"><MdNotificationAdd /></span>}
             </div>
             <Carousel
                 showArrows={true}
@@ -60,14 +65,20 @@ const Notification = () => {
                         <Modal.Title className='text-center'>🔔</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-
                         {isOpen && (
                             <div className='card'>
                                 {notifications.map((notifi, i) => (
                                     <div key={i} className='notification-card'>
-                                        {/* <img>{notifi.img}</img> */}
-                                        <h2>{notifi.title}</h2>
-                                        <p>{notifi.message}</p>
+                                        <div class="row">
+                                            <div className='col'>
+                                                <h2>{notifi.title}</h2>
+                                            </div>
+                                            <div className='col'>
+                                                <p>{notifi.message}
+                                                    <br />
+                                                    <a href={notifi.url}>more...</a></p>
+                                            </div>
+                                        </div>
                                         <Button className="close-btn" onClick={() => removeNotification(notifi.id)}>&times;</Button>
                                     </div>
                                 ))}
@@ -75,9 +86,10 @@ const Notification = () => {
                         )}
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseModal}>
-                        बंद
-                        </Button>
+                        <Button onClick={handleCloseAndClearModal}>All Clear</Button>
+                        {notifications.length ? <Button variant="secondary" onClick={handleCloseModal}>
+                            बंद
+                        </Button> : ''}
                     </Modal.Footer>
                 </Modal>
             </Carousel>

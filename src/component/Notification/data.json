@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "message": "Notification 1",
+        "title": "वाढदिवस.",
+        "url": "#"
+    },
+    {
+        "id": 2,
+        "message": "Notification 2",
+        "title": "आरोग्य तपासणी.",
+        "url": "#"
+    },
+    {
+        "id": 3,
+        "message": "Notification 3",
+        "title": "कार्यक्रम1.",
+        "url": "#"
+    },
+    {
+        "id": 4,
+        "message": "Notification 4",
+        "title": "कार्यक्रम2.",
+        "url": "#"
+    },
+    {
+        "id": 5,
+        "message": "Notification 5",
+        "title": "कार्यक्रम3.",
+        "url": "#"
+    }
+]

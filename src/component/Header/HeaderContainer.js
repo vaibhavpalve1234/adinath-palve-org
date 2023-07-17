@@ -18,7 +18,10 @@ const HeaderContainer = () => {
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     };
-
+    const whatsGroupURL = 'https://chat.whatsapp.com/9SZk2qWn2d5LWFc49MLtRy'
+    const message = `Please add me in "आदिनाथ पालवे मित्र मंडळ 🚩"`
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://api.whatsapp.com/send/?phone=9921122627&text&type=phone_number&app_absent=0&text=${encodedMessage}`
     return (
         <div className="header">
             <div className="logo">
@@ -34,7 +37,7 @@ const HeaderContainer = () => {
             <div className="social-media">
                 <a className='social-media-icon' href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /> </a>
                 <a className='social-media-icon' href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /> </a>
-                <a className='social-media-icon ' href='https://wa.me/9921122627'><FaWhatsapp /> </a>
+                <a className='social-media-icon ' href={whatsappURL}><FaWhatsapp /> </a>
                 <a className='social-media-icon '> <Notification /> </a>
 
             </div>
@@ -75,7 +78,7 @@ const HeaderContainer = () => {
                     <div className="menu-item"><a className="nav-link active" href="/">contact</a></div>
                     <div className="menu-item"><a className="nav-link active" href="/">Feedback</a></div>
                     <div className="menu-item" onClick={() => setShowRegisterModal(true)}><a>Register</a></div>
-                    <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div>
+                    {/* <div className="menu-item" onClick={() => setShowLoginModal(true)}><a>Login</a></div> */}
                 </div>
             )}
         </div>
