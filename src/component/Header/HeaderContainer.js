@@ -50,7 +50,7 @@ const HeaderContainer = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
+                    बंद
                     </Button>
                 </Modal.Footer>
             </Modal>

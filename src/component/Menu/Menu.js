@@ -23,7 +23,7 @@ function Menu() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
-            Close
+          बंद
           </Button>
         </Modal.Footer>
       </Modal>
@@ -36,7 +36,7 @@ function Menu() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
-            Close
+          बंद
           </Button>
         </Modal.Footer>
       </Modal>

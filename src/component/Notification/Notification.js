@@ -12,9 +12,9 @@ const Notification = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showModel, setShowModal] = useState(false);
     const [notifications, setNotifications] = useState([
-        { id: 1, message: 'Notification 1', title: "hello" },
-        { id: 2, message: 'Notification 2', title: "hello" },
-        { id: 3, message: 'Notification 3', title: "hello" }
+        { id: 1, message: 'Notification 1', title: "Happy birthday", img:'' },
+        { id: 2, message: 'Notification 2', title: "health cehck up", img:'' },
+        { id: 3, message: 'Notification 3', title: "evening event", img:'' }
     ]);
 
     const handleNotificationClick = () => {
@@ -65,6 +65,7 @@ const Notification = () => {
                             <div className='card'>
                                 {notifications.map((notifi, i) => (
                                     <div key={i} className='notification-card'>
+                                        {/* <img>{notifi.img}</img> */}
                                         <h2>{notifi.title}</h2>
                                         <p>{notifi.message}</p>
                                         <Button className="close-btn" onClick={() => removeNotification(notifi.id)}>&times;</Button>
@@ -75,7 +76,7 @@ const Notification = () => {
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
-                            Close
+                        बंद
                         </Button>
                     </Modal.Footer>
                 </Modal>

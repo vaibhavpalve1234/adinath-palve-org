@@ -143,7 +143,7 @@ const PhotoGallery = () => {
                                 <Slider img={expandPhotoes[expandedImage.i]} />
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button onClick={handleCloseClick}>Close</Button>
+                                <Button onClick={handleCloseClick}>बंद</Button>
                             </Modal.Footer>
                         </Modal>
                     )}
