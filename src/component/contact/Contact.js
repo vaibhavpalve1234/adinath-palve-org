@@ -25,7 +25,7 @@ function Contact() {
                             className="form-control"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            required
+                            placeholder='name '
                         />
                     </div>
                     <div className="form-group">
@@ -37,6 +37,7 @@ function Contact() {
                             value={number}
                             onChange={(e) => setNumber(e.target.value)}
                             required
+                            placeholder='+91-7777777777'
                         />
                     </div>
                     <div className="form-group">
@@ -46,7 +47,7 @@ function Contact() {
                             className="form-control"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            required
+                            placeholder='please add me in group आदिनाथ पालवे मित्र मंडळ 🚩'
                         ></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
