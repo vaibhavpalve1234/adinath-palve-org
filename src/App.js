@@ -11,7 +11,6 @@ export default function App() {
     <Routes >
         <Route path="/" element={<Header />} />  
         <Route path="*" element={<NotFound />} />
-
     </Routes>
   </BrowserRouter>
   );

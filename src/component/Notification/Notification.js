@@ -12,11 +12,10 @@ import data from './data.json';
 const Notification = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showModel, setShowModal] = useState(false);
-    const [notifications, setNotifications] = useState([]);
+    const [notifications, setNotifications] = useState(data);
 
     const handleNotificationClick = () => {
         setIsOpen(true);
-        setNotifications(data)
         setShowModal(true);
         // console.log(data)
 
@@ -71,15 +70,15 @@ const Notification = () => {
                                     <div key={i} className='notification-card'>
                                         <div class="row">
                                             <div className='col'>
-                                                <h2>{notifi.title}</h2>
+                                                <h4><strong>{notifi.title}</strong></h4>
                                             </div>
                                             <div className='col'>
+                                                <h6>{notifi.date}</h6>
                                                 <p>{notifi.message}
                                                     <br />
                                                     <a href={notifi.url}>more...</a></p>
                                             </div>
                                         </div>
-                                        <Button className="close-btn" onClick={() => removeNotification(notifi.id)}>&times;</Button>
                                     </div>
                                 ))}
                             </div>
