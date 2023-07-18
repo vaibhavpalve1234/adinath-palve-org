@@ -19,7 +19,7 @@ const HeaderContainer = () => {
         setShowMenu(!showMenu);
     };
     const whatsGroupURL = 'https://chat.whatsapp.com/9SZk2qWn2d5LWFc49MLtRy'
-    const message = `Please add me in "आदिनाथ पालवे मित्र मंडळ 🚩"`
+    const message = `Please add me in group आदिनाथ पालवे मित्र मंडळ🚩`
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/send/?phone=9921122627&type=phone_number&app_absent=0&text=${encodedMessage}`
     return (
