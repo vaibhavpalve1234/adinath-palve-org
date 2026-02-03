@@ -4,7 +4,14 @@ import './Footer.css'
 import Contact from '../contact/Contact';
 import PostForm from '../Map/Map';
 
-function Footer() {
+const iconsById = {
+    instagram: FaInstagram,
+    facebook: FaFacebook,
+    whatsapp: FaWhatsapp,
+    twitter: FaTwitter,
+};
+
+function Footer({ content }) {
     return (
         <div className='footer'>
             <div className="container" >
@@ -13,22 +20,33 @@ function Footer() {
                     <div className="col-lg-4 text-center">
                         <h4><strong>Address</strong></h4>
                         <p>
-                            <strong>ShivSena Shakha,</strong>
-                            <br/><strong>SantoshNagar, </strong>  
-                            <br /><strong>O.T. Section -3,</strong>  
-                            <br /><strong>Ulhasnagar-421003</strong> 
+                            {content?.addressLines?.map((line) => (
+                                <React.Fragment key={line}>
+                                    <strong>{line}</strong>
+                                    <br />
+                                </React.Fragment>
+                            ))}
                         </p>
-                        <h6>+91-9921122627</h6>
+                        <h6>{content?.phone}</h6>
                         <hr />
                         <h4>connect Us !!</h4>
                         <p>
                             <strong>Social Media Application</strong><br />
                         </p>
                         <div className="social-mediai-footer">
-                            <a className='social-media-icon' href='https://www.instagram.com/adinath_palve_99/'><FaInstagram /></a>
-                            <a className='social-media-icon' href='https://www.facebook.com/profile.php?id=100012732132768'><FaFacebook /></a>
-                            <a className='social-media-icon' href='https://wa.me/9921122627/?text=Please add me in group आदिनाथ पालवे मित्र मंडळ 🚩'><FaWhatsapp /></a>
-                            <a className='social-media-icon'><FaTwitter /></a>
+                            {content?.socialLinks?.map((link) => {
+                                const Icon = iconsById[link.id];
+                                return (
+                                    <a
+                                        key={link.id}
+                                        className='social-media-icon'
+                                        href={link.href || undefined}
+                                        aria-label={link.label}
+                                    >
+                                        {Icon ? <Icon /> : null}
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
                     <div className="col-lg-4 text-center">
