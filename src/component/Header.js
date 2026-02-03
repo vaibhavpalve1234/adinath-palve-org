@@ -14,7 +14,6 @@ import {
     expandedGalleryPhotos,
     footerContent,
     appFooter,
-    headerContent,
 } from '../data/politicianData';
 
 export default function Header() {
@@ -42,7 +41,7 @@ export default function Header() {
     return (
         <div>
             <div >
-                <HeaderContainer content={headerContent} />
+                <HeaderContainer />
             </div>
             <div>
                 <Details slides={heroSlides} />
