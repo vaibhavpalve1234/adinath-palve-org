@@ -296,3 +296,49 @@ export const headerContent = {
     { id: 'register', label: 'Register', href: '#', action: 'register' },
   ],
 };
+
+export const impactStats = [
+  { id: 'beneficiaries', label: 'Beneficiaries Supported', value: '25,000+' },
+  { id: 'projects', label: 'Community Projects', value: '180+' },
+  { id: 'health', label: 'Health Camps Conducted', value: '65+' },
+  { id: 'education', label: 'Students Assisted', value: '4,500+' },
+];
+
+export const governmentServices = [
+  {
+    id: 'aadhaar',
+    name: 'Aadhaar Card Services',
+    description: 'Update details, download e-Aadhaar, and track enrollment.',
+    link: 'https://uidai.gov.in/',
+  },
+  {
+    id: 'pan',
+    name: 'PAN Card Services',
+    description: 'Apply for a new PAN, corrections, and status tracking.',
+    link: 'https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html',
+  },
+  {
+    id: 'passport',
+    name: 'Passport Services',
+    description: 'Apply for passports, appointments, and application status.',
+    link: 'https://www.passportindia.gov.in/',
+  },
+  {
+    id: 'voter',
+    name: 'Voter ID Services',
+    description: 'Register to vote, update details, and download e-EPIC.',
+    link: 'https://voters.eci.gov.in/',
+  },
+  {
+    id: 'ration',
+    name: 'Ration Card Services',
+    description: 'Check eligibility, apply, and update ration card details.',
+    link: 'https://nfsa.gov.in/portal/ration-card/',
+  },
+  {
+    id: 'umang',
+    name: 'UMANG Portal',
+    description: 'Unified access to multiple government services in one place.',
+    link: 'https://umang.gov.in/',
+  },
+];
