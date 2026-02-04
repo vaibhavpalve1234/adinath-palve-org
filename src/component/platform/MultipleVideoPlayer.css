@@ -1,19 +1,23 @@
 .multiple-video-player {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    padding: 8px 0;
   }
   
   .video-list {
     display: flex;
+    gap: 16px;
     padding: 10px;
   }
   
   .video-item {
     flex: 0 0 auto;
-    margin-right: 10px;
     width: 320px;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    background: #ffffff;
   }
   
   .video-item video {
