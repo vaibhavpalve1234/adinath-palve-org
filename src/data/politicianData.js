@@ -254,3 +254,45 @@ export const appFooter = {
   owner: 'Adinath palve',
   designer: 'Vaibhav palve',
 };
+
+export const headerContent = {
+  logo: {
+    href: 'https://en.wikipedia.org/wiki/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)',
+    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg/360px-Shiv_Sena_(Uddhav_Balasaheb_Thackeray)_logo.svg.png',
+    alt: 'Shiv Sena logo',
+    width: 70,
+  },
+  socialLinks: [
+    {
+      id: 'instagram',
+      href: 'https://www.instagram.com/adinath_palve_99/',
+      label: 'Instagram',
+      type: 'icon',
+    },
+    {
+      id: 'facebook',
+      href: 'https://www.facebook.com/profile.php?id=100012732132768',
+      label: 'Facebook',
+      type: 'icon',
+    },
+    {
+      id: 'whatsapp',
+      href: 'https://wa.me/9921122627/?text=Please add me in group आदिनाथ पालवे मित्र मंडळ 🚩',
+      label: 'WhatsApp',
+      type: 'icon',
+    },
+    {
+      id: 'notification',
+      label: 'Notifications',
+      type: 'notification',
+    },
+  ],
+  menuItems: [
+    { id: 'home', label: 'Home', href: '/' },
+    { id: 'photo', label: 'Photo', href: '/' },
+    { id: 'work', label: 'Work', href: '/' },
+    { id: 'contact', label: 'contact', href: '/' },
+    { id: 'feedback', label: 'Feedback', href: '/' },
+    { id: 'register', label: 'Register', href: '#', action: 'register' },
+  ],
+};
